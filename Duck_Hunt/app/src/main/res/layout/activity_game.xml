@@ -48,17 +48,18 @@
         />
 
     <TextView
-        android:id="@+id/textViewLevel"
+        android:id="@+id/textViewCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="0dp"
+        android:fontFamily="@font/pixelfont"
+        android:text="0"
         android:textColor="@android:color/black"
         android:textSize="35sp"
-        android:fontFamily="@font/pixelfont"/>
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageViewDuck"
@@ -68,4 +69,17 @@
         tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="100dp"
         android:onClick="duckClick"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pixelfont"
+        android:text="p"
+        android:textColor="@android:color/black"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
