@@ -61,12 +61,11 @@
         android:fontFamily="@font/pixelfont"/>
 
     <ImageView
-        android:id="@+id/imageViewBird"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/duck" />
+        android:id="@+id/imageViewDuck"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/duck"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:onClick="duckClick"/>
 </android.support.constraint.ConstraintLayout>
