@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Duck Hunt</string>
+    <string name="button_start_game">Start Game!</string>
+    <string name="edittext_nickname">Nickname</string>
+    <string name="message_wrong_nick">Write a nick!</string>
+    <string name="error_wrong_nick">Nick required!</string>
+</resources>

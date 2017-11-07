@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.kgrzeg.tictactoe.GameActivity">
+
+    <ImageView
+        android:id="@+id/field1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/field2"
+        app:layout_constraintEnd_toStartOf="@+id/field2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field2"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove"/>
+
+    <ImageView
+        android:id="@+id/field2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="doMove"
+        app:layout_constraintEnd_toStartOf="@+id/field3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/field3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/field2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field2"
+        app:layout_constraintTop_toTopOf="@+id/field2"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/field5"
+        app:layout_constraintEnd_toStartOf="@+id/field5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field5"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/field6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field4"
+        app:layout_constraintTop_toBottomOf="@+id/field2"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/field5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field5"
+        app:layout_constraintTop_toTopOf="@+id/field5"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/field8"
+        app:layout_constraintEnd_toStartOf="@+id/field8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/field8"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/field9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field7"
+        app:layout_constraintTop_toBottomOf="@+id/field5"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <ImageView
+        android:id="@+id/field9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/field8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/field8"
+        app:layout_constraintTop_toTopOf="@+id/field8"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/empty"
+        tools:ignore="VectorDrawableCompat"
+        android:onClick="doMove" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="End game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field8"
+        android:onClick="endGame"/>
+
+    <TextView
+        android:id="@+id/Points1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/Nick1"
+        app:layout_constraintStart_toStartOf="@+id/Nick1"
+        app:layout_constraintTop_toBottomOf="@+id/Nick1" />
+
+    <TextView
+        android:id="@+id/Nick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/Points2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/Nick2"
+        app:layout_constraintStart_toStartOf="@+id/Nick2"
+        app:layout_constraintTop_toBottomOf="@+id/Nick2" />
+
+    <TextView
+        android:id="@+id/Nick1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/Playing1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Now play"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Nick1"
+        app:layout_constraintEnd_toEndOf="@+id/Nick1"
+        app:layout_constraintStart_toStartOf="@+id/Nick1" />
+
+    <TextView
+        android:id="@+id/Playing2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Now play"
+        android:textColor="@color/colorAccent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/Nick2"
+        app:layout_constraintEnd_toEndOf="@+id/Nick2"
+        app:layout_constraintStart_toStartOf="@+id/Nick2" />
+</android.support.constraint.ConstraintLayout>

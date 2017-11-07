@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Łapanie Kaczek</string>
+    <string name="button_start_game">Rozpocznij Grę!</string>
+    <string name="edittext_nickname">Imie</string>
+    <string name="message_wrong_nick">Napisz imie!</string>
+    <string name="error_wrong_nick">Imie jest wymagane!</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="email" />
+    <string name="password_hint" >Password</string>
+    <string name="email_hint" >Email</string>
+    <string name="button_hint" >Log in!</string>
+    <string name="form_header">Log in form</string>
+</resources>
