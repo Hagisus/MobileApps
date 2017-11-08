@@ -12,6 +12,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean isRed = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,17 +25,30 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                switchFragment();
             }
         });
 
-        Fragment f = new RedFragment();
+        switchFragment();
+    }
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.container,f)
-                .commit();
+    private void switchFragment() {
+        if(isRed) {
+            Fragment f = new BlueFragment();
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.container, f)
+                    .commit();
+        }else{
+            Fragment f = new RedFragment();
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.container, f)
+                    .commit();
+        }
+        isRed = !isRed;
     }
 
     @Override
