@@ -31,6 +31,8 @@ public class MyAwariaItemRecyclerViewAdapter extends RecyclerView.Adapter<MyAwar
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        //Picasso.with(context).load("http://i.imgur.com/DvpvklR.png").into(imageView);
+
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
         holder.mContentView.setText(mValues.get(position).content);
