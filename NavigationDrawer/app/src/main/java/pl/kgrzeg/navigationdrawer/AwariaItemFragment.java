@@ -33,7 +33,7 @@ public class AwariaItemFragment extends Fragment {
         awariaItemList.add(new AwariaItem(
                 "Wgniecona maska",
                 "Lekko stuknięte autko, drzewo wzięło się z nikąd >.<",
-                "BMW 3",
+                "BMW 5 E39",
                 "http://www.rgbstock.com/cache1nt0Tt/users/j/ja/jaz1111/300/dMG8Wo.jpg" ));
         awariaItemList.add(new AwariaItem(
                 "Uszkodzona lampa",

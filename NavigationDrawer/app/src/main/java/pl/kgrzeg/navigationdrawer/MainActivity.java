@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private final String version = "v0.1";
+    private final String version = "v0.2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

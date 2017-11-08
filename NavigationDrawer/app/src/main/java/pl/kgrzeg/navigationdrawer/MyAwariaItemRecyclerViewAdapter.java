@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import pl.kgrzeg.navigationdrawer.AwariaItemFragment.OnListFragmentInteractionListener;
-import pl.kgrzeg.navigationdrawer.dummy.DummyContent.DummyItem;
-
 import java.util.List;
 
 public class MyAwariaItemRecyclerViewAdapter extends RecyclerView.Adapter<MyAwariaItemRecyclerViewAdapter.ViewHolder> {
@@ -40,7 +37,11 @@ public class MyAwariaItemRecyclerViewAdapter extends RecyclerView.Adapter<MyAwar
         holder.titleTextView.setText(mValues.get(position).getTitle());
         holder.carModelTextView.setText(mValues.get(position).getCarModel());
 
-        Picasso.with(ctx).load(mValues.get(position).getPhotoUrl()).into(holder.photoImageView);
+        Picasso.with(ctx)
+                .load(mValues.get(position).getPhotoUrl())
+                .resize(160, 160)
+                .centerCrop()
+                .into(holder.photoImageView);
     }
 
     @Override
