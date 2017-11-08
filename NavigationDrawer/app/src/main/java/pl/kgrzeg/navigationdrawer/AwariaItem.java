@@ -10,9 +10,6 @@ public class AwariaItem {
     private String carModel;
     private String photoUrl;
 
-    public AwariaItem() {
-    }
-
     public AwariaItem(String title, String description, String carModel, String photoUrl) {
         this.title = title;
         this.description = description;
