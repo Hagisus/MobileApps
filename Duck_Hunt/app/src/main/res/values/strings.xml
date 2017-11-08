@@ -4,7 +4,7 @@
     <string name="edittext_nickname">Nickname</string>
     <string name="message_wrong_nick">Write a nick!</string>
     <string name="error_wrong_nick">Nick required!</string>
-    <string name="dialog_gameover_message">You hunted </string>
+    <string name="dialog_gameover_message">You hunted</string>
     <string name="dialog_gameover_message2">ducks.</string>
     <string name="dialog_gameover_title" >GAME OVER</string>
     <string name="ok">ok</string>

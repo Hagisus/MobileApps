@@ -61,7 +61,7 @@ public class gameActivity extends AppCompatActivity {
     private void showGameOverDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        builder.setMessage(getString(R.string.dialog_gameover_message) + String.valueOf(counter) + getString(R.string.dialog_gameover_message2))
+        builder.setMessage(getString(R.string.dialog_gameover_message) +" "+String.valueOf(counter)+" "+ getString(R.string.dialog_gameover_message2))
                 .setTitle(getString(R.string.dialog_gameover_title))
                 .setCancelable(false);
 
@@ -71,6 +71,7 @@ public class gameActivity extends AppCompatActivity {
                 counter = 0;
                 gameOver = false;
                 startCountDown();
+                //dialog.dismiss();
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
