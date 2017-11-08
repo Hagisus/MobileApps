@@ -5,4 +5,9 @@
     <string name="edittext_nickname">Imie</string>
     <string name="message_wrong_nick">Napisz imie!</string>
     <string name="error_wrong_nick">Imie jest wymagane!</string>
+    <string name="dialog_gameover_message">Upolowano </string>
+    <string name="dialog_gameover_message2">kaczek.</string>
+    <string name="dialog_gameover_title">Koniec gry</string>
+    <string name="ok">ok</string>
+    <string name="cancel">anuluj</string>
 </resources>

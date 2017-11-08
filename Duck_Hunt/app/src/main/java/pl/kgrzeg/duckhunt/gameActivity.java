@@ -1,12 +1,15 @@
 package pl.kgrzeg.duckhunt;
 
+import android.content.DialogInterface;
 import android.os.CountDownTimer;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -14,6 +17,8 @@ public class gameActivity extends AppCompatActivity {
     TextView textViewName, textViewTime, textViewCounter;
     ImageView duck;
     int counter = 0;
+    long time = 10000;
+    boolean gameOver = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +37,13 @@ public class gameActivity extends AppCompatActivity {
         textViewName.setText(extras.getString("nick"));
 
         moveDuck();
+        textViewTime.setText(time / 1000 + "s");
 
-        new CountDownTimer(60000, 1000) {
+        startCountDown();
+    }
+
+    private void startCountDown() {
+        new CountDownTimer(time, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 textViewTime.setText(millisUntilFinished / 1000 + "s");
@@ -41,11 +51,43 @@ public class gameActivity extends AppCompatActivity {
 
             public void onFinish() {
                 textViewTime.setText("Game Over!");
+                gameOver = true;
+
+                showGameOverDialog();
             }
         }.start();
     }
 
+    private void showGameOverDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage(getString(R.string.dialog_gameover_message) + String.valueOf(counter) + getString(R.string.dialog_gameover_message2))
+                .setTitle(getString(R.string.dialog_gameover_title))
+                .setCancelable(false);
+
+        builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                moveDuck();
+                counter = 0;
+                gameOver = false;
+                startCountDown();
+            }
+        });
+        builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
     public void duckClick(View view) {
+        if(gameOver) {
+            Toast.makeText(this, "Start a new game!", Toast.LENGTH_SHORT).show();
+            return;
+        }
         counter++;
         textViewCounter.setText(String.valueOf(counter));
 
