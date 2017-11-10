@@ -22,7 +22,7 @@ public class UserPrivateActivity extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_profile:
-                    
+
                     return true;
             }
 
