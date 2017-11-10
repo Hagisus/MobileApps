@@ -2,6 +2,7 @@ package pl.kgrzeg.navigationdrawer;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 /**
@@ -11,6 +12,7 @@ import retrofit2.http.POST;
 public interface MecaroundServerInterface {
 
     // Login request
-    @POST
-    Call<LoginResponse> doLogin(@Field("email") String e, @Field("password") String p);
+    @POST("auth/login")
+    @FormUrlEncoded
+    Call<LoginResponse> serverLogin(@Field("email") String e, @Field("password") String p);
 }

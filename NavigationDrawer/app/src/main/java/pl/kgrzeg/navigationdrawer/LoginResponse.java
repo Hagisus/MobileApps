@@ -18,13 +18,13 @@ public class LoginResponse {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public LoginResponse() {
     }
 
     /**
-     * 
+     *
      * @param nombre
      * @param email
      * @param key
